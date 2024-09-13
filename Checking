@@ -1,0 +1,37 @@
+package Module1;
+
+public class Checking extends Bank{
+    private double interest_rate;
+    private static final double overdraft_fee = 30.0;
+
+    //Construct Checking
+    public Checking(String first_name, String last_name, int accountID, double interest_rate) {
+        set_first_name(first_name);
+        set_last_name(last_name);
+        set_accountID(accountID);
+        this.interest_rate = interest_rate;
+    }
+    //Set Interest Rate
+    public void set_interest_rate(double interest_rate){
+        this.interest_rate = interest_rate;
+    }
+    //Getter for Interest rate
+    public double get_interest_rate(double interest_rate) {
+        return interest_rate;
+    }
+    //Process windrawal and overdraft fee
+    public void Withdrawal_Checking(double amount) {
+        if (amount > get_balance()) {
+            withdrawal(amount + overdraft_fee);
+            System.out.println("An overdraft fee of 30$ has been assessed");
+        } else {
+            withdrawal(amount);
+        }
+    }
+   //OVeride account summary to include interest rates
+    @Override
+    public void account_Summary() {
+        super.account_Summary();
+        System.out.println("Interest rate: " + interest_rate);
+    }
+}
