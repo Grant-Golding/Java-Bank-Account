@@ -1,0 +1,23 @@
+package Module1;
+
+public class TestCase {
+    public static void main(String[] args) {
+        Checking checkingAccount = new Checking("Grant","Golding", 156843, 2.0);
+
+        checkingAccount.account_Summary();
+
+        checkingAccount.deposit(1000);
+        checkingAccount.account_Summary();
+
+        checkingAccount.Withdrawal_Checking(999);
+        checkingAccount.account_Summary();
+
+        checkingAccount.deposit(999);
+        checkingAccount.account_Summary();
+
+        checkingAccount.Withdrawal_Checking(1500);
+        checkingAccount.account_Summary();
+
+    }
+    
+}
