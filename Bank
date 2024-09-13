@@ -1,0 +1,59 @@
+package Module1;
+
+public class Bank {
+    private String first_name;
+    private String last_name;
+    private int accountID;
+    private double balance;
+    
+    //set first name
+    public void set_first_name(String first_name) {
+        this.first_name = first_name;
+    }
+
+    //get first name
+    public String get_first_name() {
+        return first_name;
+    }
+
+        //set last name
+    public void set_last_name(String last_name) {
+        this.last_name = last_name;
+    }
+
+    //get last name
+    public String get_last_name() {
+        return last_name;
+    }
+    //set account ID
+    public void set_accountID(int accountID) {
+        this.accountID = accountID;
+    }
+    //get account ID
+    public int get_accountID() {
+        return this.accountID;
+    }
+    //return balance 
+    public double get_balance() {
+        return balance;
+    }
+    //deposit
+    public void deposit(double amount) {
+        balance += amount;
+        System.out.println("deposited amount of $" + amount);
+        ;
+    }
+    //Withrawal
+    public void withdrawal(double amount) {
+        balance -= amount;
+        System.out.println("$" + amount + " has been withdrawn");
+    }
+    //Account Sumarry
+    public void account_Summary() {
+        System.out.println("First Name: " + first_name);
+        System.out.println("Last Name: " + last_name);
+        System.out.println("Account ID: " + accountID);
+        System.out.println("Account Balance: " + balance);
+
+    }
+}
